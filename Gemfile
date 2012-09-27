@@ -22,11 +22,17 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'simple_form'
+
 gem 'heroku'
 
 gem 'jquery-rails'
 
+gem "devise"
+
 gem "mongoid", "~> 3.0.0"
+
+gem 'bootstrap-sass', '~> 2.1.0.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
