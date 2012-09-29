@@ -23,17 +23,14 @@ group :assets do
 end
 
 gem 'simple_form'
-
 gem 'heroku'
-
 gem 'jquery-rails'
-
+gem 'backbone-rails'
+gem 'underscore-rails'
+gem 'modernizr-rails'
 gem "devise"
-
 gem "mongoid", "~> 3.0.0"
-
 gem 'bootstrap-sass', '~> 2.1.0.0'
-
 gem "rspec-rails"
 
 # To use ActiveModel has_secure_password
