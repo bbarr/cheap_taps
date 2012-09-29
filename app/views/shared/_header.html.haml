@@ -1,12 +1,3 @@
-.navbar.navbar-inverse.navbar-fixed-top
-  .navbar-inner
-    .container
-      = render "shared/sign_in"
-      %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.brand{:href => "#"} Cheap Taps
-      .nav-collapse.collapse
-        %ul.nav
-      / /.nav-collapse
+%header.site_header
+  = render "shared/sign_in"
+  %h1 Cheap Taps

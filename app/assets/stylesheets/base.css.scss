@@ -1,3 +1,11 @@
-.navbar-fixed-top + .container {
-  margin-top: 30px;
+// ===================================
+// site header stuff
+.site_header {
+  h1 {
+    font-size:20px;
+  }
+}
+
+.user-nav {
+  line-height:36px;
 }

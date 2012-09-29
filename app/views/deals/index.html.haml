@@ -1,0 +1,17 @@
+%h1 Listing deals
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @deals.each do |deal|
+    %tr
+      %td= link_to 'Show', deal
+      %td= link_to 'Edit', edit_deal_path(deal)
+      %td= link_to 'Destroy', deal, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Deal', new_deal_path
