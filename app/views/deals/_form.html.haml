@@ -1,10 +1,7 @@
-= form_for @deal do |f|
-  - if @deal.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@deal.errors.count, "error")} prohibited this deal from being saved:"
-      %ul
-        - @deal.errors.full_messages.each do |msg|
-          %li= msg
-
-  .actions
-    = f.submit 'Save'
+= simple_form_for @deal do |f|
+  = f.input :name, label: "What's the deal?", required: true
+  = f.input :date, label: "When is it?", input_html: {type: "time", class: "datepicker"}, wrapper_html: {class: "datepicker-wrap"}, required: true
+  = f.input :start_time, label: "Starts at:", input_html: {type: "time", class: "time-scroller"}, wrapper_html: {class: "time-picker-wrap"}, required: true
+  = f.input :end_time, label: "Ends at:", input_html: {type: "time", class: "time-scroller"}, wrapper_html: {class: "time-picker-wrap"}, required: true
+  = f.input :recurring, as: :boolean, label: "Every week?"
+  = f.submit 'Save', class: "btn btn-primary"

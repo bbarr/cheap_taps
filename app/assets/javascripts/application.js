@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require bootstrap
+//= require mobiscroll-2.0.3.custom.min
+//= require deals

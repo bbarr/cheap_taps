@@ -1,5 +1,6 @@
 class User
   include Mongoid::Document
+
   # Include default devise modules. Others available are:
   # :token_authenticatable,
   # :lockable, :timeoutable and :omniauthable
@@ -11,7 +12,7 @@ class User
   field :encrypted_password, :type => String, :default => ""
 
   # user personal stuff
-  field :name
+  field :name, type: String, default: ""
 
   #validation
   validates_presence_of :name, :email, :encrypted_password
@@ -49,4 +50,6 @@ class User
   # admin
   field :admin, :type => Boolean, :default => "false"
 
+  # relationships
+  has_many :deals
 end
