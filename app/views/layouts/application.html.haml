@@ -3,6 +3,7 @@
   %head
     = stylesheet_link_tag "application", media: "all"
     %meta{ :"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
+    %meta{:name => "viewport", :content => "width=device-width"}
     %title CheapTaps
     = csrf_meta_tags
   %body
@@ -10,5 +11,4 @@
       = render partial: "shared/header"
       = render partial: "shared/flashes"
       = yield
-
   = javascript_include_tag "require.min", "data-main" => "/assets/main"

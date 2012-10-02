@@ -14,3 +14,15 @@
     margin:0;
   }
 }
+
+.deal {
+  border:1px solid #e2e2e2;
+  padding:10px;
+  & + .deal {
+    margin-top: -1px;
+  }
+  h1 {
+    font-size:20px;
+    margin:0;
+  }
+}

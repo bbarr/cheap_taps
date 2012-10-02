@@ -1,6 +1,6 @@
 %header.site_header
-  = render "shared/sign_in"
-  %h1 Cheap Taps
   - if user_signed_in?
-    %ul
-      %li= link_to "New Deal", new_deal_path
+    %ul.nav.nav-pills.pull-right
+      %li= link_to "+ Add A Deal", new_deal_path
+      = render "shared/user_name"
+  %h1= link_to "Cheap Taps", root_path
