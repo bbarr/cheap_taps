@@ -1,10 +1,13 @@
 // ===================================
 // site header stuff
 .ct-navbar {
+  .navbar-inner {
+    padding:0;
+  }
   a {color:$cream}
   h1 {
     display:inline-block;
-    font:700 1.5em/1.5em $header-font-family;
+    font:700 1.5em/45px $header-font-family;
     margin: 0 25px 0 10px;
     vertical-align:middle;
     a {
@@ -25,12 +28,18 @@
   .nav {
     li {
       a {
+        @include transition(color .3s);
         text-shadow:none;
-        color:$cream;
+        color:$white;
         font-weight: bold;
-        padding:5px 10px;
+        padding:0 10px;
+        margin: 0;
+        line-height:$navbarHeight;
+        &:hover {
+          color:$white;
+        }
         i {
-          color:$green;
+          color:$cream;
           margin-left: -3px;
         }
       }
