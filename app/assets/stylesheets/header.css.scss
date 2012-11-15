@@ -4,44 +4,22 @@
   .navbar-inner {
     padding:0;
   }
-  a {color:$cream}
-  h1 {
-    display:inline-block;
-    font:700 1.5em/45px $header-font-family;
-    margin: 0 25px 0 10px;
-    vertical-align:middle;
-    a {
-      color:$white;
-    }
-    i {
-      @include opacity(0);
-      @include transition(.3s all);
-      font-size:.75em;
-    }
-    &:hover {
-      a, i {text-decoration: none;}
-      i {
-        @include opacity(30);
-      }
-    }
+  .brand {
+    font-family:$header-font-family; 
   }
   .nav {
     li {
       a {
-        @include transition(color .3s);
-        text-shadow:none;
-        color:$white;
-        font-weight: bold;
-        padding:0 10px;
-        margin: 0;
-        line-height:$navbarHeight;
-        &:hover {
-          color:$white;
-        }
-        i {
-          color:$cream;
-          margin-left: -3px;
-        }
+        // @include transition(color .3s);
+        // text-shadow:none;
+        // font-weight: bold;
+        // padding:0 10px;
+        // margin: 0;
+        // line-height:$navbarHeight;
+        // i {
+        //   color:$cream;
+        //   margin-left: -3px;
+        // }
       }
     }
   }

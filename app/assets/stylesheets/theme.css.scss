@@ -2,22 +2,34 @@
 $white:#F9FFFF;
 $yellow:#EFC322;
 $green:#94A500;
-$cream:#FDFFC7;
-$red:#CF2528;
 $black:#050004;
 $blacker:#030000;
+
+// http://www.colourlovers.com/palette/1530780/Pub_crawl
+$cream-stout:#201310;
+$abby-brown:#732F0B;
+$meantime:#321805;
+$cream:#E5CB95;
+$red:#9E2013;
+
 
 //twitter bootstrap customizations
 $linkColor:$green;
 
 //navbar stuff
+$navbarBrandColor:$cream;
+
+$navbarLinkColor:$cream;
+$navbarLinkColorHover:$cream;
+$navbarLinkColorActive:$cream;
+
 $navbarHeight:45px;
-$navbarBackground:$blacker;
-$navbarBackgroundHighlight:$black;
+$navbarBackground:$cream-stout;
+$navbarBackgroundHighlight:$meantime;
 
 
 //fonts
-$sansFontFamily: sans-serif;
+$sansFontFamily: "Helvetica Neue", "Segoe UI", sans-serif;
 $serifFontFamily: serif;
 $header-font-family: 'Arvo', serif;
 

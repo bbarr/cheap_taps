@@ -1,13 +1,10 @@
 %header.navbar.ct-navbar.navbar-fixed-top
   .navbar-inner
-    %h1.pull-left
-      = link_to root_path do
-        cheapTAPS
-        %i.icon-home
+    = link_to "cheapTAPS", root_path, class: "brand"
     - if user_signed_in?
-      %ul.nav.nav-pills
+      %ul.nav.nav-pills.pull-right
         %li
           = link_to new_deal_path do
             %i.icon-plus-sign
             Add A Deal
-    .pull-right= render "shared/user_name"
+        = render "shared/user_name"
