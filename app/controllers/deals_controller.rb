@@ -1,4 +1,5 @@
 class DealsController < ApplicationController
+  before_filter :get_deal_from_params_id, :only => [:edit, :show, :create, :update, :destroy]
   # GET /deals
   # GET /deals.json
   def index
@@ -13,8 +14,6 @@ class DealsController < ApplicationController
   # GET /deals/1
   # GET /deals/1.json
   def show
-    @deal = Deal.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @deal }
@@ -40,8 +39,6 @@ class DealsController < ApplicationController
   # POST /deals
   # POST /deals.json
   def create
-    @deal = Deal.new(params[:deal])
-
     respond_to do |format|
       if @deal.save
         format.html { redirect_to @deal, notice: 'Deal was successfully created.' }
@@ -56,8 +53,6 @@ class DealsController < ApplicationController
   # PUT /deals/1
   # PUT /deals/1.json
   def update
-    @deal = Deal.find(params[:id])
-
     respond_to do |format|
       if @deal.update_attributes(params[:deal])
         format.html { redirect_to @deal, notice: 'Deal was successfully updated.' }
@@ -72,7 +67,6 @@ class DealsController < ApplicationController
   # DELETE /deals/1
   # DELETE /deals/1.json
   def destroy
-    @deal = Deal.find(params[:id])
     @deal.destroy
 
     respond_to do |format|
@@ -81,3 +75,9 @@ class DealsController < ApplicationController
     end
   end
 end
+
+  private
+
+    def get_deal_from_params_id
+      @deal = Deal.find(params[:id])
+    end
