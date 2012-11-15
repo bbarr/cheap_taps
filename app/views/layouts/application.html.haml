@@ -1,14 +1,15 @@
 !!! 5
 %html
   %head
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Arvo"
     = stylesheet_link_tag "application", media: "all"
     %meta{ :"http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }
     %meta{:name => "viewport", :content => "width=device-width"}
-    %title CheapTaps
+    %title Cheap Taps! Find deals on drinks near you
     = csrf_meta_tags
   %body
-    .container
-      = render partial: "shared/header"
-      = render partial: "shared/flashes"
-      = yield
+    = render partial: "shared/header"
+    = render partial: "shared/flashes"
+    #map
+    = yield
   = javascript_include_tag "require.min", "data-main" => "/assets/main"

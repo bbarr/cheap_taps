@@ -1,0 +1,34 @@
+// http://www.colourlovers.com/palette/2060626/Having_a_beer_with_P
+$white:#F9FFFF;
+$yellow:#EFC322;
+$green:#94A500;
+$cream:#FDFFC7;
+$red:#CF2528;
+$black:#050004;
+$blacker:#030000;
+
+//twitter bootstrap customizations
+$linkColor:$green;
+
+//navbar stuff
+$navbarHeight:30px;
+$navbarBackground:$blacker;
+$navbarBackgroundHighlight:$black;
+
+
+//fonts
+$sansFontFamily: sans-serif;
+$serifFontFamily: serif;
+$header-font-family: 'Arvo', serif;
+
+body {
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend .header-style;
+}
+
+.header-style {
+  // text-transform: uppercase;
+  font-family:$header-font-family;  
+}

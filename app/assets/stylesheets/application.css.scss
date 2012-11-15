@@ -1,8 +1,9 @@
-@import "bootstrap-custom";
-@import 'bootstrap';
-@import "bootstrap-responsive";
+@import "theme";
+@import "twitter/bootstrap";
+@import "twitter/bootstrap/responsive";
+@import "twitter/bootstrap-no-sprites";
+@import "font-awesome";
 @import "jquery-ui";
-@import "mobiscroll-2.0.3.custom.min";
-@import "base";
+@import "header";
 @import "deals";
 @import "dashboard";

@@ -1,19 +1,21 @@
-.row
-  .span9
-    .sponsored-deal.deal
-      = render "deals/sponsored"
-    .map
-      = image_tag "http://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=700x400&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Ccolor:red%7Clabel:C%7C40.718217,-73.998284&sensor=false"
-    .list
-      - 10.times do
-        = render "deals/deal"
+ 
+/
+  .row
+    .span9
+      .sponsored-deal.deal
+        = render "deals/sponsored"
+      .map
+        =# image_tag "http://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=700x400&maptype=roadmap&markers=color:blue%7Clabel:S%7C40.702147,-74.&markers=color:green%7Clabel:G%7C40.711614,-74.012318&markers=color:red%7Ccolor:red%7Clabel:C%7C40.718217,-73.998284&sensor=false"
+      .list
+        - 10.times do
+          = render "deals/deal"
 
-  .span3
-    .top-contributors
-      %h3 In the know
-      - 3.times do
-        %section.contributor
-          .bling.pull-right
-            .total 999
-            .badges badges
-          %h1 User Name
+    .span3
+      .top-contributors
+        %h3 In the know
+        - 3.times do
+          %section.contributor
+            .bling.pull-right
+              .total 999
+              .badges badges
+            %h1 User Name

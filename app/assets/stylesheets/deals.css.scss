@@ -1,28 +1,3 @@
 // Place all the styles related to the deals controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.time-picker-wrap, .datepicker-wrap {
-  .controls {
-    input {
-      display:none;
-    }
-  }
-  .dw {
-    padding:0;
-  }
-  .dwi {
-    margin:0;
-  }
-}
-
-.deal {
-  border:1px solid #e2e2e2;
-  padding:10px;
-  & + .deal {
-    margin-top: -1px;
-  }
-  h1 {
-    font-size:20px;
-    margin:0;
-  }
-}

@@ -1,6 +1,13 @@
-%header.site_header
-  - if user_signed_in?
-    %ul.nav.nav-pills.pull-right
-      %li= link_to "+ Add A Deal", new_deal_path
-      = render "shared/user_name"
-  %h1= link_to "Cheap Taps", root_path
+%header.navbar.ct-navbar.navbar-fixed-top
+  .navbar-inner
+    %h1.pull-left
+      = link_to root_path do
+        cheapTAPS
+        %i.icon-home
+    - if user_signed_in?
+      %ul.nav.nav-pills
+        %li
+          = link_to new_deal_path do
+            %i.icon-plus-sign
+            Add A Deal
+    .pull-right= render "shared/user_name"
