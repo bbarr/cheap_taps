@@ -1,7 +1,6 @@
 CheapTaps::Application.routes.draw do
 
   resources :deals
-  match 'dashboard' => 'dashboard#index'
 
   devise_for :users
 
