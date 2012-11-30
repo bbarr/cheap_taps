@@ -8,8 +8,10 @@
     %title Cheap Taps! Find deals on drinks near you
     = csrf_meta_tags
   %body
-    = render partial: "shared/header"
-    = render partial: "shared/flashes"
-    #map
-    = yield
+    = render partial: "users/sidebar"
+    .non-sidebar-container
+      = render partial: "shared/header"
+      = render partial: "shared/flashes"
+      #map
+      = yield
   = javascript_include_tag "require.min", "data-main" => "/assets/main"
