@@ -1,0 +1,10 @@
+= simple_form_for @venue, class: "form-horizontal" do |f|
+  = f.input :name
+  = f.input :street_address
+  = f.input :city
+  = f.input :state
+  = f.input :country
+  = f.input :mail_code #this seems like a nice compromise on the zip/postal code thing
+  = f.input :lat
+  = f.input :long
+  = f.button :submit, "Save Venue"

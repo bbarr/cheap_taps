@@ -1,7 +1,8 @@
 = simple_form_for @deal do |f|
   = f.input :name, label: "What's the deal?", required: true
-  = f.input :date, label: "When is it?", input_html: {type: "time", class: "datepicker"}, wrapper_html: {class: "datepicker-wrap"}, required: true
+  = f.input :date, label: "When is it?", input_html: {class: "datepicker"}, wrapper_html: {class: "datepicker-wrap"}, required: true
   = f.input :start_time, label: "Starts at:", input_html: {type: "time", class: "time-scroller"}, wrapper_html: {class: "time-picker-wrap"}, required: true
   = f.input :end_time, label: "Ends at:", input_html: {type: "time", class: "time-scroller"}, wrapper_html: {class: "time-picker-wrap"}, required: true
   = f.input :recurring, as: :boolean, label: "Every week?"
+  = f.input :venue_id, as: :hidden, input_html: {value: params[:venue_id]}
   = f.submit 'Save', class: "btn btn-primary"

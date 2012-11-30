@@ -12,5 +12,5 @@ class Deal
 
   # relationships
   belongs_to :user
-  embeds_one :venue
+  belongs_to :venue
 end
