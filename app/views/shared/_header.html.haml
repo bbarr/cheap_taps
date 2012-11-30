@@ -1,13 +1,14 @@
 %header.navbar.ct-navbar.navbar-fixed-top
   .navbar-inner
-    = link_to "cheapTAPS", root_path, class: "brand"
-    #header-tag
-      Find beer deals near
-      #current-location-human
-    - if user_signed_in?
-      %ul.nav.nav-pills.pull-right
-        %li
-          = link_to new_deal_path do
-            %i.icon-plus-sign
-            Add A Deal
-        = render "shared/user_name"
+    .container
+      = link_to "cheapTAPS", root_path, class: "brand pull-left"
+      - if user_signed_in?
+        %ul.nav.nav-pills.pull-right
+          %li
+            = link_to new_deal_path do
+              %i.icon-plus-sign
+              Add A Deal
+          = render "shared/user_name"
+      #header-tag
+        Find beer deals near
+        #current-location-human

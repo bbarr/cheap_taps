@@ -1,5 +1,7 @@
 CheapTaps::Application.routes.draw do
 
+  resources :venues
+
   resources :deals
 
   devise_for :users

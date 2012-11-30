@@ -11,5 +11,7 @@ class Venue
   field :long
 
 
-  embedded_in :deal
+
+
+  has_many :deals
 end

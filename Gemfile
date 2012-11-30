@@ -26,6 +26,7 @@ group :assets do
 end
 
 gem 'simple_form'
+gem 'country_select'
 gem 'heroku'
 gem 'jquery-rails'
 gem 'backbone-rails'
