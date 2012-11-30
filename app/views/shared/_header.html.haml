@@ -5,7 +5,7 @@
       - if user_signed_in?
         %ul.nav.nav-pills.pull-right
           %li
-            = link_to new_deal_path do
+            = link_to venues_path do #user needs to find the venue for the deal first
               %i.icon-plus-sign
               Add A Deal
           = render "shared/user_name"
