@@ -11,6 +11,7 @@ define([
     
     initialize: function() {
       events.on('user:located', this.to, this);
+      this.info_window = new google.maps.InfoWindow({ content: '' });
     },
 
     render: function() {
@@ -41,11 +42,19 @@ define([
     },
 
     render_place: function(place) {
-      new gmaps.Marker({
+      var marker = new gmaps.Marker({
         map: this.gmap,
         position: place.geometry.location,
         title: place.name
       });
+      this.setup_info_window(marker, place);
+    },
+
+    setup_info_window: function(marker, place) {
+      google.maps.event.addListener(marker, 'click', function() {
+        this.info_window.setContent(Marker.render('info_window', place));
+        this.info_window.open(this.gmap, marker);
+      }.bind(this));
     },
 
     to: function(latlng) {

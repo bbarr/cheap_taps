@@ -3,6 +3,7 @@ requirejs.config({
     marker: {
       exports: 'Marker'
     },
+    'app/templates': [ 'marker' ],
     underscore: {
       exports: '_'
     },

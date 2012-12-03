@@ -3,7 +3,8 @@ define([
   'gmaps',
   'lib/events',
   'app/views/deal_map',
-  'app/views/deal_list'
+  'app/views/deal_list',
+  'app/templates'
 ], function($, gmaps, events, Map, List) {
 
   new Map().render();
